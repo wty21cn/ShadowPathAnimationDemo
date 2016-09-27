@@ -1,4 +1,4 @@
->本项目为个人博客[让CALayer的shadowPath跟随bounds一起做动画改变](http://wty.im/2016/09/26/let-shadow-path-animate-with-layer-bounds/)的Demo
+>本项目为个人博客["让CALayer的shadowPath跟随bounds一起做动画改变"](http://wty.im/2016/09/26/let-shadow-path-animate-with-layer-bounds/)的Demo
 
 ## 前言
 在iOS开发中，我们经常需要给视图添加阴影效果，最简单的方法就是通过设置CALayer的shadowColor、shadowOpacity、shadowOffset和shadowRadius这几个属性可以很方便的为 UIView 添加阴影效果。但是如果单用这几个属性会导致离屏渲染(Offscreen Rendering)，而且CoreAnimation在每一帧绘制阴影的时候都需要递归遍历所有sublayer的alpha通道从而精确的计算出阴影的轮廓，这是非常消耗性能的，从而导致了动画的卡顿。
