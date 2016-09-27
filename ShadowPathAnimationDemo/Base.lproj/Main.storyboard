@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxu-OJ-B1M">
+                                <state key="normal" title="改变Bounds"/>
+                                <connections>
+                                    <action selector="changeViewBounds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaZ-L3-xrd"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-Cj-pFq">
+                                <connections>
+                                    <action selector="enableShadowPathAnimationValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uJH-0I-Hfk"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启shadowPath动画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxk-Vy-vFq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yf0-aP-7tN" customClass="WTYShadowAnimationView">
+                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Y2i-tq-0Ls"/>
+                                    <constraint firstAttribute="width" constant="240" id="n84-dT-2Is"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvA-iB-RWk">
+                                <connections>
+                                    <action selector="enableViewAnimationValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BjV-mX-SVW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启UIVIew动画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-SH-qPL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uxk-Vy-vFq" firstAttribute="centerY" secondItem="sFm-Cj-pFq" secondAttribute="centerY" id="0ds-Mf-qPv"/>
+                            <constraint firstItem="R8v-SH-qPL" firstAttribute="centerY" secondItem="nvA-iB-RWk" secondAttribute="centerY" id="5y9-GA-hSB"/>
+                            <constraint firstItem="nvA-iB-RWk" firstAttribute="centerX" secondItem="sFm-Cj-pFq" secondAttribute="centerX" id="EZc-Qq-ipW"/>
+                            <constraint firstItem="zxu-OJ-B1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILw-7h-4KN"/>
+                            <constraint firstItem="Uxk-Vy-vFq" firstAttribute="leading" secondItem="sFm-Cj-pFq" secondAttribute="trailing" constant="20" id="Mat-eZ-dRr"/>
+                            <constraint firstItem="yf0-aP-7tN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRu-pD-dSm"/>
+                            <constraint firstItem="R8v-SH-qPL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yf0-aP-7tN" secondAttribute="bottom" id="Xwh-57-uQP"/>
+                            <constraint firstItem="sFm-Cj-pFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ZGO-RH-pBH"/>
+                            <constraint firstItem="sFm-Cj-pFq" firstAttribute="top" secondItem="nvA-iB-RWk" secondAttribute="bottom" constant="18" id="b2X-lA-w8L"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zxu-OJ-B1M" secondAttribute="bottom" constant="8" symbolic="YES" id="csg-hf-cAm"/>
+                            <constraint firstItem="zxu-OJ-B1M" firstAttribute="top" secondItem="sFm-Cj-pFq" secondAttribute="bottom" constant="8" id="ezo-yf-OU8"/>
+                            <constraint firstItem="yf0-aP-7tN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="kNe-YX-g72"/>
+                            <constraint firstItem="R8v-SH-qPL" firstAttribute="leading" secondItem="nvA-iB-RWk" secondAttribute="trailing" constant="20" id="ypY-et-Nho"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shadowPathAnimationStatusLabel" destination="Uxk-Vy-vFq" id="pSo-LK-KoY"/>
+                        <outlet property="shadowView" destination="yf0-aP-7tN" id="5z5-nH-bjy"/>
+                        <outlet property="shadowViewHeightContraint" destination="Y2i-tq-0Ls" id="NJQ-Tt-V1x"/>
+                        <outlet property="viewAnimationStatusLabel" destination="R8v-SH-qPL" id="QYY-qN-ihh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
