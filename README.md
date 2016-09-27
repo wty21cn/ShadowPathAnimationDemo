@@ -56,6 +56,16 @@
 }
 ```
 
+## Demo
+
+![DisableShadowPathAnimation](disableShadowPathAnimation.gif)
+
+可以看到当关闭shadowPath动画，也就是不执行上述代码的时候，当view的bounds改变以后shadowPath还为原来的值，并未跟随bounds进行改变。
+
+![EnableShadowPathAnimation](enableShadowPathAnimation.gif)
+
+可以看到当打开shadowPath动画，也就是要执行了上述代码时，当view的bounds改变以后shadowPath能够跟随一起改变，而且动画效果相同。
+
 ---
 >本文个人博客地址: [http://wty.im/2016/09/26/let-shadow-path-animate-with-layer-bounds/](http://wty.im/2016/09/26/let-shadow-path-animate-with-layer-bounds/) 
 
